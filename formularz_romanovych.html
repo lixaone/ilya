@@ -22,7 +22,9 @@
  .row { display:flex; gap:10px; }
  .row div { flex:1; }
  input[type=text], input[type=date], input[type=email], input[type=number] {
-   width: 100%; padding:5px; border:1px solid #aaa;
+   width: 100%; padding:8px; border:1px solid #888; border-radius:8px;
+   background:#e6d7ff;
+   box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.5);
  }
  .checkboxes label { display:inline-block; margin-right:15px; }
  .styles label { margin-right:10px; }
@@ -37,15 +39,9 @@
 <body>
 <div class="container">
 <h2>Formularz Zgłoszeniowy do CREW Graffiti</h2><form>
-  <div class="row">
-    <div>
-      <label>Imię*:</label>
-      <input type="text">
-    </div>
-    <div>
-      <label>Nazwisko*:</label>
-      <input type="text">
-    </div>
+  <label>Imię*:</label>
+<input type="text"><label>Nazwisko*:</label> <input type="text"> <div> <label>Nazwisko*:</label> <input type="text"> </div>
+
   </div><label>Pseudonim (Nick):</label> <input type="text">
 
 <label>Data urodzenia:</label> <input type="text" placeholder="DD MM RRRR">
@@ -78,12 +74,10 @@
 
   <textarea></textarea>  <div style="text-align:center;">
     <button type="submit">Wyślij</button>
-    <button type="reset">Wyczyść</button> 
-    <progress>Proszę czekać...</progress> 
+    <button type="reset">Wyczyść</button>
+   
   </div>
 </form>
 </div>
 </body>
 </html>
-
-
