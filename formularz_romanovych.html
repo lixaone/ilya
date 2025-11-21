@@ -1,142 +1,90 @@
-<!DOCTYPE html>
-<html lang="pl">
+
+
+
+
+<!DOCTYPE html><html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formularz Zgłoszeniowy do CREW Graffiti</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-    }
-    form {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    fieldset {
-      border: 1px solid #ccc;
-      margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    legend {
-      font-weight: bold;
-    }
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="url"] {
-      width: 100%;
-      padding: 6px;
-      box-sizing: border-box;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    .checkbox-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 5px;
-    }
-    .checkbox-group label {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    textarea {
-      width: 100%;
-      height: 80px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      padding: 6px;
-    }
-    .buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-    button {
-      padding: 10px 20px;
-      margin: 0 10px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-    }
-    button[type="reset"] {
-      background-color: #f44336;
-      color: white;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Formularz Zgłoszeniowy do CREW Graffiti</title>
+<style>
+ body {
+   background-color: #e6d7ff;
+   font-family: Arial, sans-serif;
+ }
+ .container {
+   width: 700px;
+   margin: auto;
+   background: white;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+ }
+ h2 {
+   text-align: center;
+ }
+ label { display:block; margin-top:10px; }
+ .row { display:flex; gap:10px; }
+ .row div { flex:1; }
+ input[type=text], input[type=date], input[type=email], input[type=number] {
+   width: 100%; padding:5px; border:1px solid #aaa;
+ }
+ .checkboxes label { display:inline-block; margin-right:15px; }
+ .styles label { margin-right:10px; }
+ textarea {
+   width:100%; height:120px; padding:5px;
+ }
+ button {
+   margin-top:20px; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;
+ }
+</style>
 </head>
 <body>
-
-  <h1>Formularz Zgłoszeniowy do CREW Graffiti</h1>
-
-  <form>
-    <fieldset>
-      <legend>Dane Osobiste</legend>
-
-      <label>Imię:* <input type="text" name="imie" required></label>
-      <label>Nazwisko:* <input type="text" name="nazwisko" required></label>
-      <label>Pseudonim (Nick): <input type="text" name="nick"></label>
-      <label>Data urodzenia: <input type="date" name="data_urodzenia"></label>
-      <label>Miasto zamieszkania: <input type="text" name="miasto"></label>
-      <label>Email:* <input type="email" name="email" required></label>
-      <label>Numer telefonu: <input type="tel" name="telefon"></label>
-      <label>Data zgłoszenia: <input type="date" name="data_zgloszenia"></label>
-    </fieldset>
-
-    <fieldset>
-      <legend>Informacje o działalności</legend>
-
-      <label>Języki, którymi rozmawiasz:</label>
-      <div class="checkbox-group">
-        <label><input type="checkbox" name="jezyk" value="angielski"> Angielski</label>
-        <label><input type="checkbox" name="jezyk" value="niemiecki"> Niemiecki</label>
-        <label><input type="checkbox" name="jezyk" value="francuski"> Francuski</label>
-        <label><input type="checkbox" name="jezyk" value="inny"> Inny</label>
-      </div>
-
-      <label>Ulubiony Napój:* <input type="text" name="napoj" required></label>
-
-      <label>Style Rysowania:</label>
-      <div class="checkbox-group">
-        <label><input type="checkbox" name="styl" value="Bubble"> Bubble</label>
-        <label><input type="checkbox" name="styl" value="Wildstyle"> Wildstyle</label>
-        <label><input type="checkbox" name="styl" value="Throw-up"> Throw-up</label>
-        <label><input type="checkbox" name="styl" value="Realism"> Realism</label>
-        <label><input type="checkbox" name="styl" value="Inny"> Inny</label>
-      </div>
-
-      <label>Link do portfolio (inst.): <input type="url" name="portfolio"></label>
-      <label>Notatki dla CREW: <textarea name="notatki"></textarea></label>
-    </fieldset>
-
-    <div class="buttons">
-      <button type="submit">Wyślij</button>
-      <button type="reset">Wyczyść</button>
+<div class="container">
+<h2>Formularz Zgłoszeniowy do CREW Graffiti</h2><form>
+  <div class="row">
+    <div>
+      <label>Imię*:</label>
+      <input type="text">
     </div>
-  </form>
+    <div>
+      <label>Nazwisko*:</label>
+      <input type="text">
+    </div>
+  </div><label>Pseudonim (Nick):</label> <input type="text">
 
-  <p style="text-align:center; margin-top:20px;">Pomysł: Ilia Romonovich</p>
+<label>Data urodzenia:</label> <input type="text" placeholder="DD MM RRRR">
 
+<label>Miasto zamieszkania*:</label> <input type="text">
+
+<label>Email*:</label> <input type="email">
+
+<label>Numer telefonu:</label> <input type="text">
+
+  <h3>Informacje o działalności</h3><label>Języki, którymi rozmawiasz:</label>
+
+  <div class="checkboxes">
+    <label><input type="checkbox"> Angielski</label>
+    <label><input type="checkbox"> Niemiecki</label>
+    <label><input type="checkbox"> Francuski</label>
+  </div><label>Ulubiony napój*:</label> <input type="text">
+
+<label>Style rysowania:</label>
+
+  <div class="styles">
+    <label><input type="checkbox"> Bubble</label>
+    <label><input type="checkbox"> Wildstyle</label>
+    <label><input type="checkbox"> Throw-up</label>
+    <label><input type="checkbox"> Realism</label>
+    <label><input type="checkbox"> Inny</label>
+  </div><label>Link do portfolio (inst.):</label> <input type="text">
+
+<label>Notatki dla CREW:</label>
+
+  <textarea></textarea>  <div style="text-align:center;">
+    <button type="submit">Wyślij</button>
+    <button type="reset">Wyczyść</button>
+  </div>
+</form>
+</div>
 </body>
-
 </html>
