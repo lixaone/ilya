@@ -3,3 +3,10 @@
 
 
  <progress>Proszę czekać...</progress> 
+
+
+ <TD><button onclick="alert('A kuku')" style="height:80px;width:300px">Przycisk 
+niespodzianka</button></TD>  
+
+<input type="date">
+<input type="color"> 
